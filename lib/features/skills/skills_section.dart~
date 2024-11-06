@@ -10,7 +10,7 @@ class SkillsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 500,
       child: GridView.count(
         crossAxisCount: 3,
         mainAxisSpacing: 16.0,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/assets.dart';
 import 'package:portfolio/core/constants.dart';
 import 'package:portfolio/core/extenstions.dart';
 import 'package:portfolio/core/label.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -33,11 +35,15 @@ class AboutSection extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
               const SizedBox(height: 50),
-              ElevatedButton(onPressed: () {}, child: const Text("My Resume")),
+              ElevatedButton(
+                  onPressed: () {
+                    launchUrl(Uri.parse(resumeUrl));
+                  },
+                  child: const Text("My Resume")),
             ],
           ),
         ),
-        if (context.isDesktop) Expanded(flex: 1, child: Image.asset(logoPath)),
+        if (context.isDesktop) Expanded(flex: 1, child: Image.asset(Assets.logo)),
       ],
     );
   }

@@ -15,6 +15,5 @@ ThemeData themeData = ThemeData(
     headlineLarge: TextStyle(color: AppColors.green),
     headlineSmall: TextStyle(color: AppColors.white),
     bodyLarge: TextStyle(color: AppColors.lightGrey),
-    labelLarge: TextStyle(color: AppColors.white),
   ),
 );
