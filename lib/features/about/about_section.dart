@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/assets.dart';
+import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
 import 'package:portfolio/core/extenstions.dart';
 import 'package:portfolio/core/label.dart';
+import 'package:portfolio/features/skills/skills_section.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutSection extends StatelessWidget {
@@ -13,7 +15,7 @@ class AboutSection extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          flex: 2,
+          // flex: 2,
           child: Column(
             crossAxisAlignment: context.isDesktop
                 ? CrossAxisAlignment.start
@@ -22,7 +24,7 @@ class AboutSection extends StatelessWidget {
             children: [
               Label(
                 "Hi, I'm Abdelrahman Allam.",
-                style: Theme.of(context).textTheme.headlineLarge,
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(color: AppColors.green),
               ),
               const SizedBox(height: 10),
               Label(
@@ -43,7 +45,6 @@ class AboutSection extends StatelessWidget {
             ],
           ),
         ),
-        if (context.isDesktop) Expanded(flex: 1, child: Image.asset(Assets.logo)),
       ],
     );
   }
